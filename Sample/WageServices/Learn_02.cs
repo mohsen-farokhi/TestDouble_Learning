@@ -29,7 +29,9 @@
     {
         public decimal GetCurrentWagePecent()
         {
-            return 0.5M; // read from db
+            // read from db
+
+            throw new System.NotImplementedException();
         }
     }
 }

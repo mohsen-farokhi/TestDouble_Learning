@@ -1,9 +1,9 @@
 ﻿using FluentAssertions;
 using Xunit;
 
-namespace Sample.Test.WageServices
+namespace Sample.Test.WageService.Learn_01
 {
-    public class Learn_01_Test
+    public class DamageServiceTest
     {
         [Fact]
         public void wage_is_subtracted_from_amount()
