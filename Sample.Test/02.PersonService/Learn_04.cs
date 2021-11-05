@@ -1,18 +1,17 @@
 ﻿using Sample.People;
 using Xunit;
 
-namespace Sample.Test.PersonService.Learn_05
+namespace Sample.Test.PersonService.Learn_04
 {
     public class PersonServiceTest
     {
         [Fact]
-        public void save_person_into_database()
+        public void saves_person_into_database()
         {
-            var mockRepository =
-                new Moq.Mock<People.Learn_05.IPersonRepositoy>();
+            var mockRepository = new Moq.Mock<IPersonRepositoy>();
 
             var personService =
-                new People.Learn_05.PersonService(mockRepository.Object);
+                new People.Learn_04.PersonService(mockRepository.Object);
 
             var expected = new ResigterPersonDto
             {
@@ -22,6 +21,7 @@ namespace Sample.Test.PersonService.Learn_05
 
             personService.ResigterPerson(request: expected);
 
+            // Interaction Verification
             mockRepository.Verify
                 (c => c.Insert(Moq.It.Is<Person>
                 (c => c.FirstName == expected.FirstName &&

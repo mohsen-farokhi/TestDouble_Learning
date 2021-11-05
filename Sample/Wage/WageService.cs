@@ -1,4 +1,4 @@
-﻿namespace Sample.WageServices.Learn_02
+﻿namespace Sample.Wage
 {
     public class WageService
     {
@@ -12,26 +12,11 @@
         public decimal Calculate(decimal amount)
         {
             var wagePercent = 
-                _wageRepository.GetCurrentWagePecent();
+                _wageRepository.GetCurrentWagePercent();
 
             var wageValue = wagePercent * amount / 100;
 
             return amount - wageValue;
-        }
-    }
-
-    public interface IWageRepository
-    {
-        decimal GetCurrentWagePecent();
-    }
-
-    public class WageRepository : IWageRepository
-    {
-        public decimal GetCurrentWagePecent()
-        {
-            // read from db
-
-            throw new System.NotImplementedException();
         }
     }
 }

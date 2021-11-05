@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using Sample.Test.TestDoubles.Stubs;
 using Xunit;
 
 namespace Sample.Test.WageService.Learn_02
@@ -9,10 +10,11 @@ namespace Sample.Test.WageService.Learn_02
         public void wage_is_subtracted_from_amount()
         {
             var repository = 
-                new TestDoubles.StubWageRepositories.Learn_02.StubWageRepository();
+                ConfigurableStubWageRepository
+                .CreateNewStub()
+                .WithWagePercent(0.5M);
 
-            var service = 
-                new Sample.WageServices.Learn_02.WageService(repository);
+            var service = new Wage.WageService(repository);
 
             var actual = service.Calculate(1000000);
 
