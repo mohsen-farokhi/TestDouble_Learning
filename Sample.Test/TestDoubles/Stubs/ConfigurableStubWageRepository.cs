@@ -4,20 +4,9 @@
     {
         private decimal _wagePercent;
 
-        private ConfigurableStubWageRepository()
-        {
-        }
-
-        public static ConfigurableStubWageRepository CreateNewStub()
-        {
-            return new ConfigurableStubWageRepository();
-        }
-
-        public ConfigurableStubWageRepository WithWagePercent(decimal wagePercent)
+        public void WithWagePercent(decimal wagePercent)
         {
             _wagePercent = wagePercent;
-
-            return this;
         }
 
         public decimal GetCurrentWagePercent()

@@ -1,6 +1,5 @@
 ﻿using Sample.Logging;
 using Sample.People;
-using Sample.Test._03.Dummy;
 using Xunit;
 
 namespace Sample.Test.PersonService.Learn_05
@@ -18,8 +17,8 @@ namespace Sample.Test.PersonService.Learn_05
 
             var expected = new ResigterPersonDto
             {
-                FirstName = "Nicolas",
-                LastName = "Cage",
+                FirstName = "Mohsen",
+                LastName = "Farokhi",
             };
             #endregion
 
@@ -34,8 +33,8 @@ namespace Sample.Test.PersonService.Learn_05
 
             //var expected = new ResigterPersonDto
             //{
-            //    FirstName = "Nicolas",
-            //    LastName = "Cage",
+            //    FirstName = "Mohsen",
+            //    LastName = "Farokhi",
             //};
             #endregion
 

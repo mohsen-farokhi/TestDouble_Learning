@@ -12,10 +12,9 @@ namespace Sample.Test.WageService.Learn_03
         public void wage_is_subtracted_from_amount
             (decimal amount, decimal wagePercent, decimal expected)
         {
-            var repository = 
-                ConfigurableStubWageRepository
-                .CreateNewStub()
-                .WithWagePercent(wagePercent);
+            var repository = new ConfigurableStubWageRepository();
+
+            repository.WithWagePercent(wagePercent);
 
             var service = new Wage.WageService(repository);
 

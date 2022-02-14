@@ -15,8 +15,8 @@ namespace Sample.Test.PersonService.Learn_04
 
             var expected = new ResigterPersonDto
             {
-                FirstName = "Nicolas",
-                LastName = "Cage",
+                FirstName = "Mohsen",
+                LastName = "Farokhi",
             };
 
             personService.ResigterPerson(request: expected);

@@ -16,17 +16,19 @@ namespace Sample.Test._04.Spy
 
             var expected = new ResigterPersonDto
             {
-                FirstName = "Nicolas",
-                LastName = "Cage",
+                FirstName = "Mohsen",
+                LastName = "Farokhi",
             };
 
             service.ResigterPerson(request: expected);
 
             var actual = repository.GetSavedPerson();
 
-            repository.GetNumberOfSavedPerson().Should().Be(1);
-            actual.FirstName.Should().Be(expected.FirstName);
-            actual.LastName.Should().Be(expected.LastName);
+            repository.GetNumberOfSavedPerson().Should().Be(expected: 1);
+
+            actual.FirstName.Should().Be(expected: expected.FirstName);
+
+            actual.LastName.Should().Be(expected: expected.LastName);
         }
     }
 }

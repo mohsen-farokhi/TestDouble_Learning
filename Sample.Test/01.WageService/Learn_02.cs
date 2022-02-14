@@ -9,10 +9,9 @@ namespace Sample.Test.WageService.Learn_02
         [Fact]
         public void wage_is_subtracted_from_amount()
         {
-            var repository = 
-                ConfigurableStubWageRepository
-                .CreateNewStub()
-                .WithWagePercent(0.5M);
+            var repository = new ConfigurableStubWageRepository();
+
+            repository.WithWagePercent(0.5M);
 
             var service = new Wage.WageService(repository);
 

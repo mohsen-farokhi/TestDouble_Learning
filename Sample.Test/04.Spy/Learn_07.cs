@@ -24,8 +24,8 @@ namespace Sample.Test._04.Spy
 
             var expected = new ResigterPersonDto
             {
-                FirstName = "Nicolas",
-                LastName = "Cage",
+                FirstName = "Mohsen",
+                LastName = "Farokhi",
             };
 
             service.ResigterPerson(request: expected);

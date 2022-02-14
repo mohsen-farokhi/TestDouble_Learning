@@ -1,6 +1,6 @@
 ﻿using Sample.Logging;
 
-namespace Sample.Test._03.Dummy
+namespace Sample.Test.PersonService.Learn_05
 {
     internal class DummyLogger : ILogger
     {
